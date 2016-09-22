@@ -1,0 +1,15 @@
+== Kolik přímek prochází alespoň třemi body?
+
+Mé řešení problému ze stránky Checkio.org.
+
+Vstup programu::
+seznam bodů v rovině... 
+[[2, 2], [2, 5], [2, 8], [5, 2], [7, 2], [8, 2], [9, 2], [4, 5], [4, 8], [7, 5], [5, 8], [9, 8]]
+
+Výstup programu::
+seznam přímek, které prochází alespoň třemi zadanými body...
+[s= ( 0 , 1 ), p= ( 2 , 0 ), y= 0 * x + 8, y= 1.5 * x + -5.5, y= 0 * x + 5, y= 0 * x + 2, y= -1.5 * x + 15.5]
+
+Vertikální přímka je dána směrovým vektorem a bodem na ose *x*, ostatní přímky jsou ve směrnicovém tvaru.
+
+Problém je řešen vytvořením objektu *Line*, který má předefinován operátor *rovnosti*. Díky tomu mohu do struktury *množina* vkládat přímky zadané dvěma body a nestarat se o filtraci shodných přímek.
